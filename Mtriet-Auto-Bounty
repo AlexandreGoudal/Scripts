@@ -1,0 +1,70 @@
+getgenv().Config = {
+    ["Team"] = "Marines", --// Marines, Pirates
+    ["Webhook"] = {
+        ["Enable"] = true, --// Enable if you have Webhook Url
+        ["Url"] = "https://discord.com/api/webhooks/1191446946712408205/sbuYF2K9rD93NkbuUMZV_o8pYln7enqfsIY9fFEssXArN4zlRQblKrLUhdeb2A81gNIA" --// Your webhook url
+    },
+    ["Skip"] = {
+        ["V4"] = true, --// Skip V4
+        ["Fruit"] = { --// Skip Fruit
+            "Portal-Portal"
+        }
+    },
+    ["Chat"] = {
+        ["Enable"] = false, --// Enable Chat
+        ["Content"] = {"gg"} --// Content
+    },
+    ["Misc"] = {
+        ["Hide If Low Health"] = false, --// Run
+        ["Hide Health"] = {4000,5000}, --// Health for run
+        ["Lock Camera"] = true, --// Lock Cam to target
+        ["FPS Boost"] = true, --// Booster FPS
+        ["White Screen"] = true, --// White Screen
+        ["Bypass TP"] = true, --// Bypass TP 1 -> 2 hit
+        ["Spam All Skill On V4"] = true, --// If you have v4, warn: change your weapon setting
+        ["Gun Method"] = false --// Enable if you use gun
+    },
+    --//  Next
+    ["Weapons"] = {
+        ["Melee"] = {
+            ["Enable"] = true,
+            ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true, ["HoldTime"] = 1.5},
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["C"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["V"] = {["false"] = false, ["HoldTime"] = 0}
+            }
+        },
+        ["Blox Fruit"] = {
+            ["Enable"] = false,
+            ["Delay"] = 3,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["C"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["V"] = {["Enable"] = false, ["HoldTime"] = 0},
+                ["F"] = {["Enable"] = true, ["HoldTime"] = 0}
+            }
+        },
+        --// Copy Next
+        ["Sword"] = {
+            ["Enable"] = true,
+            ["Delay"] = 1.5,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0}
+            }
+        },
+        ["Gun"] = {
+            ["Enable"] = false,
+            ["Delay"] = 1.2,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0}
+            }
+        }
+    }
+}
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Hunt/main/AutoBountyV2.lua"))()
