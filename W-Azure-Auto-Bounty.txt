@@ -38,7 +38,7 @@ getgenv().Setting = {
             ['button_color'] = Color3.fromRGB(255, 221, 252)
         },
     },
-    ["In Combat Reset"] = true, -- Shouldn't Cause Much False Resets, Enable This Make Farming Much Faster
+    ["In Combat Reset"] = false, -- Shouldn't Cause Much False Resets, Enable This Make Farming Much Faster
     ["BypassTP"] = {
         ["Enable"] = true,
         ["Attempt"] = 3, -- Tween If Failed After x Attempts
