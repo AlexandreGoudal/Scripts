@@ -177,60 +177,6 @@ elseif placeId == 9812430518
        end
     end
 
-    -- define the third loop
-    local function loop3()
-        -- Spam "F" Attack of Gryphon
-       while true do
-           local args = {
-                [1] = "Sword Style",
-                [2] = "F",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait 1 second before firing the next ability
-          print("Loop 2 is running")
-       end
-    end
-
-    -- define the fourth loop
-    local function loop4()
-        -- Spam "U" Attack of Gryphon
-       while true do
-           local args = {
-                [1] = "Sword Style",
-                [2] = "U",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait 1 second before firing the next ability
-          print("Loop 2 is running")
-       end
-    end
-
-    -- define the fifth loop
-    local function loop5()
-        -- Spam "Q" Attack of Gryphon
-       while true do
-           local args = {
-                [1] = "Sword Style",
-                [2] = "Q",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait(5) -- wait 30 second before firing the next ability
-          print("Loop 3 is running")
-       end
-    end
-    
     -- define the sixth loop
     local function loop6()
         -- Spam "M1" Attack of Jolly Rapier
@@ -352,57 +298,6 @@ elseif placeId == 9812430518
           print("Loop 9 is running")
        end
     end
-    
-    local function loop13()
-        -- Spam "F" Attack of Ope
-       while true do
-           local args = {
-                [1] = "Devil Fruit",
-                [2] = "F",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 10 is running")
-       end
-    end
-    
-    local function loop14()
-        -- Spam "F" Attack of Fishman Karate V2
-       while true do
-           local args = {
-                [1] = "Fighting Style",
-                [2] = "F",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 9 is running")
-       end
-    end
-
-    local function loop16()
-        -- Spam "E" Attack of Support Style
-       while true do
-           local args = {
-                [1] = "Support Style",
-                [2] = "E",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 9 is running")
-       end
-    end
 
     local function loop17()
         -- Spam "M1" Attack of Sword
@@ -458,18 +353,12 @@ elseif placeId == 9812430518
     -- start the loops in separate threads
     if closestPart then
         coroutine.wrap(loop1)()
-        coroutine.wrap(loop3)()
-        coroutine.wrap(loop4)()
-        coroutine.wrap(loop5)()
         coroutine.wrap(loop6)()
         coroutine.wrap(loop7)()
         coroutine.wrap(loop8)()
         coroutine.wrap(loop10)()
         coroutine.wrap(loop11)()
         coroutine.wrap(loop12)()
-        coroutine.wrap(loop13)()
-        coroutine.wrap(loop14)()
-        coroutine.wrap(loop16)()
         coroutine.wrap(loop17)()
         coroutine.wrap(loop18)()
         coroutine.wrap(loop19)()
