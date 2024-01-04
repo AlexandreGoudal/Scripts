@@ -17,19 +17,6 @@ for _, part in ipairs(workspace:GetDescendants()) do
     end
 end
 
--- Tween To Boss
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local picaBoss = game.Workspace.Entities["Light Admiral"].PrimaryPart
-
-local function tween()
-    while true do
-        player.Character.Humanoid:MoveTo(picaBoss.Position)
-        wait(0.1)
-    end
-    wait(1)
-end
-
  -- Spam Attacks
 -- define the first loop
 local function loop1()
@@ -200,7 +187,6 @@ end
 
 -- start the loops in separate threads
 if closestPart then
-    coroutine.wrap(tween)()
     coroutine.wrap(loop1)()
     coroutine.wrap(loop2)()
     coroutine.wrap(loop3)()
