@@ -94,7 +94,7 @@ elseif placeId == 9812430518
     if closestPart then
         local args = {
             [1] = "Fighting Style",
-            [2] = "",
+            [2] = "U",
             [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
             [4] = closestPart,
             [5] = 5
@@ -122,7 +122,7 @@ elseif placeId == 9812430518
     if closestPart then
         local args = {
             [1] = "Gun Style",
-            [2] = "F",
+            [2] = "",
             [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
             [4] = closestPart,
             [5] = 5
