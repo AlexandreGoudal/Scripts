@@ -17,6 +17,12 @@ elseif placeId == 12697622192 then
     game:GetService("ReplicatedStorage").Remotes.toggleSprint:FireServer()
     wait(0.5)
     
+    local args = {
+        [1] = "66"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("buytitle"):FireServer(unpack(args))
+
     -- Tween To Raid
     repeat wait() until game:IsLoaded()
     local part = game.Workspace.Dungeons:FindFirstChild("Pica")
