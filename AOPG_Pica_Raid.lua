@@ -184,6 +184,7 @@ elseif placeId == 9812430518
 
     -- define the first loop
     local function loop2()
+	wait(1)
         -- Spam "R" Attack of Gun
        while true do
            local args = {
