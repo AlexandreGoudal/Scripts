@@ -156,7 +156,7 @@ elseif placeId == 9812430518
     local player = Players.LocalPlayer
     local picaBoss = game.Workspace.Entities["Pica"].PrimaryPart
 
-    local function loop20()
+    local function tween()
         while true do
             player.Character.Humanoid:MoveTo(picaBoss.Position)
             wait(0.1)
@@ -184,7 +184,6 @@ elseif placeId == 9812430518
 
     -- define the first loop
     local function loop2()
-	wait(1)
         -- Spam "R" Attack of Gun
        while true do
            local args = {
@@ -335,17 +334,27 @@ elseif placeId == 9812430518
     
     -- start the loops in separate threads
     if closestPart then
+        coroutine.wrap(tween)()
+	wait(1)
         coroutine.wrap(loop1)()
+	wait(1)
         coroutine.wrap(loop2)()
+	wait(1)
         coroutine.wrap(loop3)()
+	wait(1)
         coroutine.wrap(loop7)()
+	wait(1)
         coroutine.wrap(loop8)()
+	wait(1)
         coroutine.wrap(loop9)()
+	wait(1)
         coroutine.wrap(loop10)()
+	wait(1)
         coroutine.wrap(loop14)()
+	wait(1)
         coroutine.wrap(loop15)()
+	wait(1)
         coroutine.wrap(loop16)()
-        coroutine.wrap(loop20)()
     end
 else
     end
