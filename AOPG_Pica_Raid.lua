@@ -70,7 +70,7 @@ elseif placeId == 9812430518
     end
     
     -- In Raid Buffs
-    -- Enable Flame Sword
+    -- Enable Sword Buff
     if closestPart then
         local args = {
             [1] = "Sword Style",
@@ -84,11 +84,11 @@ elseif placeId == 9812430518
     end
     wait(2)
     
-    -- Enable Awekened Fishman
+    -- Enable Melee Buff
     if closestPart then
         local args = {
             [1] = "Fighting Style",
-            [2] = "Y",
+            [2] = "U",
             [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
             [4] = closestPart,
             [5] = 5
@@ -98,7 +98,7 @@ elseif placeId == 9812430518
     end
     wait(3)
     
-    -- Enable Limitless
+    -- Enable Support Style Buff
     if closestPart then
         local args = {
             [1] = "Support Style",
@@ -112,11 +112,25 @@ elseif placeId == 9812430518
     end
     wait(2)
     
+    -- Enable Haki
+    if closestPart then
+        local args = {
+            [1] = "Gun Style",
+            [2] = "F",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+    
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+    end
+    wait(3)
+    
 
     -- Enable Haki
     if closestPart then
         local args = {
-            [1] = "Fighting Style",
+            [1] = "Gun Style",
             [2] = "G",
             [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
             [4] = closestPart,
@@ -161,10 +175,10 @@ elseif placeId == 9812430518
     -- Spam Attacks
     -- define the first loop
     local function loop1()
-        -- Spam "E" Attack of Gryphon
+        -- Spam "E" Attack of Gun
        while true do
            local args = {
-                [1] = "Sword Style",
+                [1] = "Gun Style",
                 [2] = "E",
                 [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
                 [4] = closestPart,
@@ -177,8 +191,103 @@ elseif placeId == 9812430518
        end
     end
 
-    -- define the sixth loop
+    -- define the first loop
+    local function loop2()
+        -- Spam "R" Attack of Gun
+       while true do
+           local args = {
+                [1] = "Gun Style",
+                [2] = "R",
+                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+                [4] = closestPart,
+                [5] = 5
+            }
+    
+            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+            wait() -- wait 1 second before firing the next ability
+          print("Loop 1 is running")
+       end
+    end
+
+    -- Spam Attacks
+    -- define the first loop
+    local function loop3()
+        -- Spam "A" Attack of Melee
+       while true do
+           local args = {
+                [1] = "Fighting Style",
+                [2] = "A",
+                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+                [4] = closestPart,
+                [5] = 5
+            }
+    
+            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+            wait() -- wait 1 second before firing the next ability
+          print("Loop 1 is running")
+       end
+    end
+
+    -- Spam Attacks
+    -- define the first loop
+    local function loop4()
+        -- Spam "E" Attack of Melee
+       while true do
+           local args = {
+                [1] = "Fighting Style",
+                [2] = "E",
+                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+                [4] = closestPart,
+                [5] = 5
+            }
+    
+            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+            wait() -- wait 1 second before firing the next ability
+          print("Loop 1 is running")
+       end
+    end
+
+    -- Spam Attacks
+    -- define the first loop
+    local function loop5()
+        -- Spam "R" Attack of Melee
+       while true do
+           local args = {
+                [1] = "Fighting Style",
+                [2] = "R",
+                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+                [4] = closestPart,
+                [5] = 5
+            }
+    
+            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+            wait() -- wait 1 second before firing the next ability
+          print("Loop 1 is running")
+       end
+    end
+
+    -- Spam Attacks
+    -- define the first loop
     local function loop6()
+        -- Spam "Y" Attack of Melee
+       while true do
+           local args = {
+                [1] = "Fighting Style",
+                [2] = "Y",
+                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+                [4] = closestPart,
+                [5] = 5
+            }
+    
+            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+            wait() -- wait 1 second before firing the next ability
+          print("Loop 1 is running")
+       end
+    end
+
+
+    -- define the sixth loop
+    local function loop7()
         -- Spam "M1" Attack of Jolly Rapier
        while true do
            local args = {
@@ -196,11 +305,11 @@ elseif placeId == 9812430518
     end
     
     -- define the seventh loop
-    local function loop7()
+    local function loop8()
         -- Spam Observation Haki
        while true do
            local args = {
-                [1] = "Gun Style",
+                [1] = "Support Style",
                 [2] = "T",
                 [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
                 [4] = closestPart,
@@ -214,7 +323,7 @@ elseif placeId == 9812430518
     end
     
     -- define the eighth loop
-    local function loop8()
+    local function loop9()
         -- Spam Infinity
        while true do
            local args = {
@@ -231,7 +340,7 @@ elseif placeId == 9812430518
        end
     end
 
-    local function loop9()
+    local function loop10()
         -- Spam "M1" Attack of Ope
        while true do
            local args = {
@@ -248,8 +357,8 @@ elseif placeId == 9812430518
        end
     end
     
-    local function loop10()
-        -- Spam "Q" Attack of Ope
+    local function loop11()
+        -- Spam "Q" Attack of Fruit
        while true do
            local args = {
                 [1] = "Devil Fruit",
@@ -265,8 +374,8 @@ elseif placeId == 9812430518
        end
     end
     
-    local function loop11()
-        -- Spam "E" Attack of Ope
+    local function loop12()
+        -- Spam "E" Attack of Fruit
        while true do
            local args = {
                 [1] = "Devil Fruit",
@@ -282,11 +391,11 @@ elseif placeId == 9812430518
        end
     end
     
-    local function loop12()
-        -- Spam "R" Attack of Fishman Karate V2
+    local function loop13()
+        -- Spam "R" Attack of Fruit
        while true do
            local args = {
-                [1] = "Fighting Style",
+                [1] = "Devil Fruit",
                 [2] = "R",
                 [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
                 [4] = closestPart,
@@ -299,7 +408,7 @@ elseif placeId == 9812430518
        end
     end
 
-    local function loop17()
+    local function loop14()
         -- Spam "M1" Attack of Sword
        while true do
            local args = {
@@ -316,7 +425,7 @@ elseif placeId == 9812430518
        end
     end
     
-    local function loop18()
+    local function loop15()
         -- Spam "M1" Attack of Fighting Style
        while true do
            local args = {
@@ -333,7 +442,7 @@ elseif placeId == 9812430518
        end
     end
     
-    local function loop19()
+    local function loop16()
         -- Spam "M1" Attack of Support Style
        while true do
            local args = {
@@ -353,15 +462,21 @@ elseif placeId == 9812430518
     -- start the loops in separate threads
     if closestPart then
         coroutine.wrap(loop1)()
+        coroutine.wrap(loop2)()
+        coroutine.wrap(loop3)()
+        coroutine.wrap(loop4)()
+        coroutine.wrap(loop5)()
         coroutine.wrap(loop6)()
         coroutine.wrap(loop7)()
         coroutine.wrap(loop8)()
+        coroutine.wrap(loop9)()
         coroutine.wrap(loop10)()
         coroutine.wrap(loop11)()
         coroutine.wrap(loop12)()
-        coroutine.wrap(loop17)()
-        coroutine.wrap(loop18)()
-        coroutine.wrap(loop19)()
+        coroutine.wrap(loop13)()
+        coroutine.wrap(loop14)()
+        coroutine.wrap(loop15)()
+        coroutine.wrap(loop16)()
         coroutine.wrap(loop20)()
     end
 else
