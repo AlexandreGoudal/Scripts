@@ -187,25 +187,14 @@ end
 
 -- start the loops in separate threads
 if closestPart then
-    coroutine.wrap(tween)()
-wait(1)
     coroutine.wrap(loop1)()
-wait(1)
     coroutine.wrap(loop2)()
-wait(1)
     coroutine.wrap(loop3)()
-wait(1)
     coroutine.wrap(loop7)()
-wait(1)
     coroutine.wrap(loop8)()
-wait(1)
     coroutine.wrap(loop9)()
-wait(1)
     coroutine.wrap(loop10)()
-wait(1)
     coroutine.wrap(loop14)()
-wait(1)
     coroutine.wrap(loop15)()
-wait(1)
     coroutine.wrap(loop16)()
 end
