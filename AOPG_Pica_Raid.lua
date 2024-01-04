@@ -147,20 +147,6 @@ elseif placeId == 9812430518
     end
     wait(3)
     
-    -- Enable Ope Room
-    if closestPart then
-        local args = {
-            [1] = "Devil Fruit",
-            [2] = "Y",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(1)
-    
     -- Toggle Sprint
     game:GetService("ReplicatedStorage").Remotes.toggleSprint:FireServer()
     wait(1)
@@ -215,71 +201,13 @@ elseif placeId == 9812430518
        end
     end
 
-    -- Spam Attacks
     -- define the first loop
     local function loop3()
-        -- Spam "A" Attack of Melee
+        -- Spam "A" Attack of Gun
        while true do
            local args = {
-                [1] = "Fighting Style",
+                [1] = "Gun Style",
                 [2] = "A",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-    
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait 1 second before firing the next ability
-          print("Loop 1 is running")
-       end
-    end
-
-    -- Spam Attacks
-    -- define the first loop
-    local function loop4()
-        -- Spam "E" Attack of Melee
-       while true do
-           local args = {
-                [1] = "Fighting Style",
-                [2] = "E",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-    
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait 1 second before firing the next ability
-          print("Loop 1 is running")
-       end
-    end
-
-    -- Spam Attacks
-    -- define the first loop
-    local function loop5()
-        -- Spam "R" Attack of Melee
-       while true do
-           local args = {
-                [1] = "Fighting Style",
-                [2] = "R",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-    
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait 1 second before firing the next ability
-          print("Loop 1 is running")
-       end
-    end
-
-    -- Spam Attacks
-    -- define the first loop
-    local function loop6()
-        -- Spam "Y" Attack of Melee
-       while true do
-           local args = {
-                [1] = "Fighting Style",
-                [2] = "Y",
                 [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
                 [4] = closestPart,
                 [5] = 5
@@ -294,7 +222,7 @@ elseif placeId == 9812430518
 
     -- define the sixth loop
     local function loop7()
-        -- Spam "M1" Attack of Jolly Rapier
+        -- Spam "M1" Attack of Gun
        while true do
            local args = {
                 [1] = "Gun Style",
@@ -362,57 +290,6 @@ elseif placeId == 9812430518
           print("Loop 6 is running")
        end
     end
-    
-    local function loop11()
-        -- Spam "Q" Attack of Fruit
-       while true do
-           local args = {
-                [1] = "Devil Fruit",
-                [2] = "Q",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 7 is running")
-       end
-    end
-    
-    local function loop12()
-        -- Spam "E" Attack of Fruit
-       while true do
-           local args = {
-                [1] = "Devil Fruit",
-                [2] = "E",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 8 is running")
-       end
-    end
-    
-    local function loop13()
-        -- Spam "R" Attack of Fruit
-       while true do
-           local args = {
-                [1] = "Devil Fruit",
-                [2] = "R",
-                [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-                [4] = closestPart,
-                [5] = 5
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-            wait() -- wait before firing the next ability
-          print("Loop 9 is running")
-       end
-    end
 
     local function loop14()
         -- Spam "M1" Attack of Sword
@@ -470,16 +347,10 @@ elseif placeId == 9812430518
         coroutine.wrap(loop1)()
         coroutine.wrap(loop2)()
         coroutine.wrap(loop3)()
-        coroutine.wrap(loop4)()
-        coroutine.wrap(loop5)()
-        coroutine.wrap(loop6)()
         coroutine.wrap(loop7)()
         coroutine.wrap(loop8)()
         coroutine.wrap(loop9)()
         coroutine.wrap(loop10)()
-        coroutine.wrap(loop11)()
-        coroutine.wrap(loop12)()
-        coroutine.wrap(loop13)()
         coroutine.wrap(loop14)()
         coroutine.wrap(loop15)()
         coroutine.wrap(loop16)()
