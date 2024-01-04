@@ -179,7 +179,6 @@ elseif placeId == 9812430518
     
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait 1 second before firing the next ability
-          print("Loop 1 is running")
        end
     end
 
