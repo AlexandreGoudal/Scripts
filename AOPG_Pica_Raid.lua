@@ -74,79 +74,9 @@ elseif placeId == 9812430518
             end
         end
     end
-    
-    -- In Raid Buffs
-    -- Enable Sword Buff
-    if closestPart then
-        local args = {
-            [1] = "Sword Style",
-            [2] = "Y",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
 
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(3)
-    
-    -- Enable Melee Buff
-    if closestPart then
-        local args = {
-            [1] = "Fighting Style",
-            [2] = "U",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-    
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(5)
-    
-    -- Enable Support Style Buff
-    if closestPart then
-        local args = {
-            [1] = "Support Style",
-            [2] = "Y",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-    
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(3)
-    
-    -- Enable Gun Buff
-    if closestPart then
-        local args = {
-            [1] = "Gun Style",
-            [2] = "F",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-    
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(5)
-    
-
-    -- Enable Haki
-    if closestPart then
-        local args = {
-            [1] = "Gun Style",
-            [2] = "G",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-    
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-    end
-    wait(3)
-    
+-- Put back the buffs here
+	
     -- Toggle Sprint
     game:GetService("ReplicatedStorage").Remotes.toggleSprint:FireServer()
     wait(1)
