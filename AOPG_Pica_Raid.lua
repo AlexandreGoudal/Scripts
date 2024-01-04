@@ -215,7 +215,6 @@ elseif placeId == 9812430518
     
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait 1 second before firing the next ability
-          print("Loop 1 is running")
        end
     end
 
@@ -234,7 +233,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait before firing the next ability
-          print("Loop 4 is running")
        end
     end
     
@@ -252,7 +250,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait 1 second before firing the next ability
-          print("Loop 5 is running")
        end
     end
     
@@ -270,7 +267,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait 1 second before firing the next ability
-          print("Loop 5 is running")
        end
     end
 
@@ -287,7 +283,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait before firing the next ability
-          print("Loop 6 is running")
        end
     end
 
@@ -304,7 +299,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait before firing the next ability
-          print("Loop 12 is running")
        end
     end
     
@@ -321,7 +315,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait before firing the next ability
-          print("Loop 13 is running")
        end
     end
     
@@ -338,7 +331,6 @@ elseif placeId == 9812430518
 
             game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
             wait() -- wait before firing the next ability
-          print("Loop 14 is running")
        end
     end
     
