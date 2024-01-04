@@ -88,7 +88,7 @@ elseif placeId == 9812430518
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
     end
-    wait(2)
+    wait(3)
     
     -- Enable Melee Buff
     if closestPart then
@@ -102,7 +102,7 @@ elseif placeId == 9812430518
     
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
     end
-    wait(3)
+    wait(5)
     
     -- Enable Support Style Buff
     if closestPart then
@@ -116,9 +116,9 @@ elseif placeId == 9812430518
     
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
     end
-    wait(2)
+    wait(3)
     
-    -- Enable Haki
+    -- Enable Gun Buff
     if closestPart then
         local args = {
             [1] = "Gun Style",
@@ -130,7 +130,7 @@ elseif placeId == 9812430518
     
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
     end
-    wait(3)
+    wait(5)
     
 
     -- Enable Haki
