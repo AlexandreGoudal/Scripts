@@ -19,7 +19,7 @@ end
 -- Tween To Boss
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
-local picaBoss = game.Workspace.Entities["Light Admiral"].PrimaryPart
+local picaBoss = game.Workspace["Raid Map"].MobSpawns.Part
 
 local function tween()
     while true do
