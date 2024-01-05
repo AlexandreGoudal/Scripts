@@ -18,7 +18,6 @@ for _, part in ipairs(workspace:GetDescendants()) do
 end
 
  -- Spam Attacks
--- define the first loop
 local function loop1()
     -- Spam "E" Attack of Gun
    while true do
@@ -31,11 +30,10 @@ local function loop1()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait 1 second before firing the next ability
+        wait()
    end
 end
 
--- define the first loop
 local function loop2()
     -- Spam "R" Attack of Gun
    while true do
@@ -48,11 +46,10 @@ local function loop2()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait 1 second before firing the next ability
+        wait()
    end
 end
 
--- define the first loop
 local function loop3()
     -- Spam "A" Attack of Gun
    while true do
@@ -65,30 +62,11 @@ local function loop3()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait 1 second before firing the next ability
+        wait()
    end
 end
 
-
--- define the sixth loop
-local function loop7()
-    -- Spam "M1" Attack of Gun
-   while true do
-       local args = {
-            [1] = "Gun Style",
-            [2] = "MouseButton1",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait before firing the next ability
-   end
-end
-
--- define the seventh loop
-local function loop8()
+local function loopobs()
     -- Spam Observation Haki
    while true do
        local args = {
@@ -100,12 +78,11 @@ local function loop8()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait 1 second before firing the next ability
+        wait()
    end
 end
 
--- define the eighth loop
-local function loop9()
+local function loopinf()
     -- Spam Infinity
    while true do
        local args = {
@@ -117,27 +94,11 @@ local function loop9()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait 1 second before firing the next ability
+        wait()
    end
 end
 
-local function loop10()
-       -- Spam "M1" Attack of Ope
-   while true do
-       local args = {
-            [1] = "Devil Fruit",
-            [2] = "MouseButton1",
-            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
-            [4] = closestPart,
-            [5] = 5
-        }
-
-        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait before firing the next ability
-   end
-end
-
-local function loop14()
+local function loop4()
     -- Spam "M1" Attack of Sword
    while true do
        local args = {
@@ -149,11 +110,11 @@ local function loop14()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait before firing the next ability
+        wait()
    end
 end
 
-local function loop15()
+local function loop5()
     -- Spam "M1" Attack of Fighting Style
    while true do
        local args = {
@@ -165,11 +126,11 @@ local function loop15()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait before firing the next ability
+        wait()
    end
 end
 
-local function loop16()
+local function loop6()
     -- Spam "M1" Attack of Support Style
    while true do
        local args = {
@@ -181,19 +142,18 @@ local function loop16()
         }
 
         game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
-        wait() -- wait before firing the next ability
+        wait()
    end
 end
 
 -- start the loops in separate threads
 if closestPart then
+    coroutine.wrap(loopobs)()
+    coroutine.wrap(loopinf)()
     coroutine.wrap(loop1)()
     coroutine.wrap(loop2)()
     coroutine.wrap(loop3)()
-    coroutine.wrap(loop7)()
-    coroutine.wrap(loop8)()
-    coroutine.wrap(loop9)()
-    coroutine.wrap(loop14)()
-    coroutine.wrap(loop15)()
-    coroutine.wrap(loop16)()
+    coroutine.wrap(loop4)()
+    coroutine.wrap(loop5)()
+    coroutine.wrap(loop6)()
 end
