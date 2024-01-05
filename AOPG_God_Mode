@@ -17,7 +17,7 @@ for _, part in ipairs(workspace:GetDescendants()) do
     end
 end
 
-local function loop1()
+local function loopobs()
     -- Spam Observation Haki
    while true do
        local args = {
@@ -33,7 +33,7 @@ local function loop1()
    end
 end
 
-local function loop2()
+local function loopinf()
     -- Spam Infinity
    while true do
        local args = {
@@ -50,6 +50,6 @@ local function loop2()
 end
 
 if closestPart then
-    coroutine.wrap(loop1)()
-    coroutine.wrap(loop2)()
+    coroutine.wrap(loopobs)()
+    coroutine.wrap(loopinf)()
 end
