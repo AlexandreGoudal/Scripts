@@ -1,0 +1,175 @@
+wait(5)
+-- Get the Closest Part
+local player = game:GetService("Players").LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local closestPart = nil
+local closestDistance = math.huge
+
+for _, part in ipairs(workspace:GetDescendants()) do
+    if part:IsA("BasePart") and part.CanCollide then
+        local distance = (part.Position - humanoidRootPart.Position).Magnitude
+        if distance < closestDistance then
+            closestDistance = distance
+        closestPart = part
+        end
+    end
+end
+
+ -- Spam Attacks
+local function loop1()
+    -- Spam "F" Attack of Fruit
+   while true do
+       local args = {
+            [1] = "Devil Fruit",
+            [2] = "F",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop2()
+    -- Spam "R" Attack of Fruit
+   while true do
+       local args = {
+            [1] = "Devil Fruit",
+            [2] = "R",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop3()
+    -- Spam "A" Attack of Fruit
+   while true do
+       local args = {
+            [1] = "Devil Fruit",
+            [2] = "A",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop4()
+    -- Spam "U" Attack of Fruit
+   while true do
+       local args = {
+            [1] = "Devil Fruit",
+            [2] = "U",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loopobs()
+    -- Spam Observation Haki
+   while true do
+       local args = {
+            [1] = "Support Style",
+            [2] = "T",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loopinf()
+    -- Spam Infinity
+   while true do
+       local args = {
+            [1] = "Support Style",
+            [2] = "G",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0, -10, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop5()
+    -- Spam "M1" Attack of Sword
+   while true do
+       local args = {
+            [1] = "Sword Style",
+            [2] = "MouseButton1",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop6()
+    -- Spam "M1" Attack of Fighting Style
+   while true do
+       local args = {
+            [1] = "Fighting Style",
+            [2] = "MouseButton1",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+local function loop7()
+    -- Spam "M1" Attack of Support Style
+   while true do
+       local args = {
+            [1] = "Support Style",
+            [2] = "MouseButton1",
+            [3] = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0.5, -0.1, 0)),
+            [4] = closestPart,
+            [5] = 5
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(unpack(args))
+        wait()
+   end
+end
+
+-- start the loops in separate threads
+if closestPart then
+    coroutine.wrap(loopobs)()
+    coroutine.wrap(loopinf)()
+    coroutine.wrap(loop1)()
+    coroutine.wrap(loop2)()
+    coroutine.wrap(loop3)()
+    coroutine.wrap(loop4)()
+    coroutine.wrap(loop5)()
+    coroutine.wrap(loop6)()
+end
